@@ -1,0 +1,33 @@
+.mr-auto, .mx-auto {
+  margin-right: auto!important;
+}
+
+.input-border {
+  border-radius: 40px;
+  border-color: #707070 #707070 #707070 #707070;
+}
+
+.social > a {
+  color: #707070;
+  font-size: 23px;
+}
+
+.social {
+  text-align: center;
+}
+
+hr {
+  background-color: #707070;
+}
+
+.col.mx-auto.d-flex.align-content-center {
+}
+
+.login-socials {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
