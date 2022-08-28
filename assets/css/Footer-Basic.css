@@ -86,3 +86,18 @@
   text-decoration: none;
 }
 
+/* 577 to 768 */
+
+@media (max-width: 768px) {
+  #navcol-1 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  #navcol-2 {
+    display: none !important;
+    background-color: red;
+  }
+}
+

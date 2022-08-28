@@ -31,3 +31,7 @@ hr {
   margin: 10px 0 20px;
 }
 
+#navcol-1 {
+  display: hidden;
+}
+
