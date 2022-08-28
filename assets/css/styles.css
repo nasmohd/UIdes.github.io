@@ -35,3 +35,53 @@ hr {
   display: hidden;
 }
 
+@media (max-width: 768px) {
+  #navcol-1 {
+    display: none;
+  }
+}
+
+#navcol-1 {
+}
+
+@media (max-width: 768px) {
+  #services_header {
+    text-align: center;
+  }
+}
+
+#footer_links {
+}
+
+#footer_contacts {
+  color: #A0A7AD;
+}
+
+.navbar-light .navbar-brand:focus, .navbar-brand {
+  color: white;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link active {
+  border-bottom: 1px solid #FFF;
+  padding-bottom: 3px;
+}
+
+#quote_src {
+  text-align: right;
+}
+
+#quote_txt {
+  font-size: 13px;
+}
+
+#index_table {
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-color: re;
+}
+
+.btn_txt {
+  font-size: 12px;
+}
+

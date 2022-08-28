@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button footer-dark text-light">
         <div class="container"><button data-toggle="collapse" data-target="#navcol-2" class="navbar-toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">FreshMemory</a>
             <div class="collapse navbar-collapse"
                 id="navcol-1">
@@ -22,7 +23,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
                 </ul>
             </div>
-            <div class="dropdown dropleft"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="text-decoration: none; color: black;">Nassor M.</a>
+            <div class="dropdown dropleft"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="text-decoration: none;color: white;">Nassor M.</a>
                 <div class="dropdown-menu text-light bg-secondary" role="menu" id="header_name_dropdown"><a class="dropdown-item" role="presentation" href="#">Profile Settings</a><a class="dropdown-item" role="presentation" href="#">Logout</a></div>
             </div><span class="actions pt-1 ml-3 ml-lg-3"> <a class="login" href="#">Log In</a><a class="btn btn-light action-button" role="button" id="action-button" href="#">Sign Up</a></span>
             <div class="collapse navbar-collapse" id="navcol-2">
@@ -33,25 +34,142 @@
             </div>
         </div>
     </nav>
-    <div class="table-responsive table-bordered">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cell 1</td>
-                    <td>Cell 2</td>
-                </tr>
-                <tr>
-                    <td>Cell 3</td>
-                    <td>Cell 4</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="row mx-1">
+        <div class="col-sm-12 col-md-12 col-lg-3 my-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Subject information</h5>
+                    <h6 class="text-muted card-subtitle mb-2">Total subjects:</h6>
+                    <p class="card-text" id="quote_txt">“By failing to prepare, you are preparing to fail.”&nbsp;<span id="quote_src" class="font-weight-bold align-content-end text-danger">- Benjamin Franklin</span><br></p>
+                    <div class="card-footer">
+                        <h6>Add/Delete Subjects</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject">Add</a><a class="btn-sm btn-danger ml-2" href="#">Delete</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-9 my-sm-3 my-2">
+            <div class="table-responsive table-dark table-bordered mx-auto">
+                <table class="table text-light" id="quote_txt">
+                    <thead>
+                        <tr>
+                            <th style="width:10%">SN</th>
+                            <th style="width:30%">Subject</th>
+                            <th style="width:20%">Number of Cards</th>
+                            <th style="width:20%">Progress (Success)</th>
+                            <th style="width:20%">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Digital Image Processing</td>
+                            <td>13</td>
+                            <td>40%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Computer Game Design</td>
+                            <td>10</td>
+                            <td>30%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Artificial Intelligence and Machine Learning</td>
+                            <td>5</td>
+                            <td>25%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Network Management and Administration</td>
+                            <td>8</td>
+                            <td>50%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mobile Application Development</td>
+                            <td>4</td>
+                            <td>75%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div>
+                            <div class="col-12 mb-2">
+                                <h4 id="services_header">Services</h4>
+                            </div>
+                            <div class="col item">
+                                <h3>Web Design and Development</h3>
+                                <ul>
+                                    <li><a href="#">Web design</a></li>
+                                    <li><a href="#">Development</a></li>
+                                    <li><a href="#">Hosting</a></li>
+                                </ul>
+                            </div>
+                            <div class="col item mt-3">
+                                <h3>Android Application Development</h3>
+                                <ul>
+                                    <li><a href="#">Android UI/UX design</a></li>
+                                    <li><a href="#">Android App Development</a></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div>
+                            <div class="col item">
+                                <h4>About</h4>
+                                <ul id="footer_links">
+                                    <li><a href="#">Company</a></li>
+                                    <li><a href="#">Team</a></li>
+                                    <li><a href="#">Careers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <div>
+                            <div class="col item">
+                                <h4>Contacts</h4>
+                                <ul id="footer_contacts">
+                                    <li>Phone Number: 0627 979633</li>
+                                    <li>Email Address:&nbsp; &nbsp;nasmohd40@gmail.com</li>
+                                    <li>Location: Magomeni, Dar es Salaam, Tanzania</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col item social">
+                        <h4 id="services_header-1" class="mb-3">Socials</h4><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Company Name © 2017</p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="add_subject">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Subject</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>The content of your modal.</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
