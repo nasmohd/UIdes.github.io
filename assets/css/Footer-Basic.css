@@ -104,3 +104,77 @@
 #navcol-1 {
 }
 
+#quote_txt tbody tr td a {
+  text-decoration: none;
+  /*color: white;*/
+}
+
+#header_nav div {
+  background-color: #282D32 !important;
+}
+
+#profile_setting_hr {
+  height: 1px;
+  background-color: #fff;
+  border: none;
+}
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  background-color: #282D32;
+  color: white !important;
+}
+
+.tab-content .active {
+  /*background-color: #aab3bb;*/
+}
+
+.nav-tabs .nav-link {
+}
+
+.nav-tabs .nav-link {
+  color: #282d32;
+  font-size: 14px;
+}
+
+.input-container {
+  display: flex;
+}
+
+.icon1 {
+  /*padding: 10px;*/
+  /*background: dodgerblue;*/
+  /*color: white;*/
+  /*min-width: 50px;*/
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .export_btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .export_btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .export_btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .export_btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .table_search {
+    margin-left: 10px;
+  }
+}
+

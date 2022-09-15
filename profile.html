@@ -15,17 +15,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button footer-dark text-light">
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean-button footer-dark text-light" id="header_nav">
         <div class="container"><button data-toggle="collapse" data-target="#navcol-2" class="navbar-toggler" id="nav_toggler"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">FreshMemory</a>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">View Subjects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">First Item</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
                 </ul>
         </div>
         <div class="dropdown dropleft"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="username_loggedin" href="#" style="text-decoration: none;color: white;">Nassor M.</a>
-            <div class="dropdown-menu text-light bg-secondary" role="menu" id="header_name_dropdown"><a class="dropdown-item" role="presentation" href="profile.html">Profile Settings</a><a class="dropdown-item" role="presentation" href="index.html">Logout</a></div>
+            <div class="dropdown-menu text-light bg-secondary" role="menu" id="header_name_dropdown"><a class="dropdown-item" role="presentation" href="#">Profile Settings</a><a class="dropdown-item" role="presentation" href="index.html">Logout</a></div>
         </div><span class="actions pt-1 ml-3 ml-lg-3"> <a class="login" href="index.html">Log In</a><a class="btn btn-light action-button" role="button" id="action-button" href="#">Sign Up</a></span>
         <div class="collapse navbar-collapse" id="navcol-2">
             <ul class="nav navbar-nav mr-auto">
@@ -36,75 +36,57 @@
         </div>
     </nav>
     <div class="row mx-1">
-        <div class="col-sm-12 col-md-12 col-lg-3 my-3">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Subject Cards</h5>
-                    <h6 class="text-muted card-subtitle mb-2">Total cards:</h6>
-                    <p class="card-text" id="quote_txt">“By failing to prepare, you are preparing to fail.”&nbsp;<span id="quote_src" class="font-weight-bold align-content-end text-danger">- Benjamin Franklin</span><br></p>
-                    <div class="card-footer">
-                        <h6>Add/Delete Card</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject">Add</a><a class="btn-sm btn-danger ml-2" href="#">Delete</a></div>
+        <div class="col-12 my-3">
+            <div>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link active" role="tab" data-toggle="tab" href="#tab-1">Profile Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-2" style="color: rgb(40,45,50);">Account Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" role="tab" data-toggle="tab" href="#tab-3" style="color: rgb(40,45,50);">Tab 3</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" role="tabpanel" id="tab-1">
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-4 col-lg-4 my-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Profile Settings</h5>
+                                        <h6 class="text-muted card-subtitle mb-2">Nassor Mohamed Suleiman</h6>
+                                        <figure class="figure"><img class="figure-img" src="assets/img/get_new_.jpg" width="100%" height="100%">
+                                            <figcaption class="figure-caption">Click on image to change</figcaption>
+                                        </figure>
+                                        <div class="card-footer">
+                                            <div></div><a class="text-white btn-sm btn-primary btn" href="#" data-toggle="modal" data-target="#add_subject">Change Picture</a><a class="btn-sm btn-danger ml-2 btn" href="#">Delete</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 col-lg-8 my-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Change/Update Profile</h5>
+                                        <hr>
+                                        <div class="row pr-lg-3"><label class="col-lg-3 col-5 col-md-4">First Name:&nbsp;</label><input type="text" class="col-7 col-lg-9 col-md-8 form-control"></div>
+                                        <div class="row mt-3 pr-lg-3"><label class="col-5 col-lg-3 col-md-4">Second Name:&nbsp;</label><input type="text" class="col-7 col-lg-9 col-md-8 form-control"></div>
+                                        <div class="row mt-3 pr-lg-3"><label class="col-5 col-lg-3 col-md-4">Last Name:&nbsp;</label><input type="text" class="col-7 col-lg-9 col-md-8 form-control"></div>
+                                        <div class="row mt-3 pr-lg-3"><label class="col-5 col-lg-3 col-md-4">Username:</label><input type="text" class="col-7 col-lg-9 col-md-8 form-control"></div>
+                                        <div class="row mt-3 pr-lg-3"><label class="col-5 col-lg-3 col-md-4">Current Password:</label><input type="password" id="id_password" class="col-7 col-lg-9 col-md-8 form-control"><i class="fa fa-eye pt-2" id="togglePassword" style="margin-left: -30px; cursor: pointer; position: relative; z-index: 2;"></i></div>
+                                        <div
+                                            class="row mt-3 pr-lg-3"><label class="col-5 col-lg-3 col-md-4">New Password:</label><input type="password" id="id_password2" class="col-7 col-lg-9 col-md-8 form-control"><i class="fa fa-eye pt-2" id="togglePassword2" style="margin-left: -30px; cursor: pointer; position: relative; z-index: 2;"></i></div>
+                                    <div
+                                        class="card-footer mt-3"><a class="text-white bg-success border-success btn-sm btn-primary ml-auto btn" href="#">Update Profile</a></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-12 col-md-12 col-lg-9 my-sm-3 my-2">
-            <div class="table-responsive table-bordered table-striped mx-auto">
-                <table class="table" id="quote_txt">
-                    <thead>
-                        <tr>
-                            <th style="width:5%">Edit</th>
-                            <th style="width:10%">SN</th>
-                            <th style="width:30%">Subject</th>
-                            <th style="width:20%">Number of Cards</th>
-                            <th style="width:20%">Progress (Success)</th>
-                            <th style="width:25%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td><a href="cards.html">Digital Image Processing<br></a></td>
-                            <td>13</td>
-                            <td>40%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2</td>
-                            <td><a href="#">Computer Game Design<br></a></td>
-                            <td>10</td>
-                            <td>30%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>3</td>
-                            <td><a href="#">Artificial Intelligence and Machine Learning<br></a></td>
-                            <td>5</td>
-                            <td>25%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>4</td>
-                            <td><a href="#">Network Management and Administration<br></a></td>
-                            <td>8</td>
-                            <td>50%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>5</td>
-                            <td><a href="cards.html">Mobile Application Development<br></a></td>
-                            <td>4</td>
-                            <td>75%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="tab-pane" role="tabpanel" id="tab-2">
+                <p>Content for tab 2.</p>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="tab-3">
+                <p>Content for tab 3.</p>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <div class="footer-dark">
         <footer>
@@ -162,7 +144,7 @@
                     <div class="col item social">
                         <h4 id="services_header-1" class="mb-3">Socials</h4><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
                 </div>
-                <p class="copyright">FreshMemory © 2022</p>
+                <p class="copyright">Company Name © 2017</p>
             </div>
         </footer>
     </div>
@@ -170,8 +152,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Add Subject/Module</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body"><textarea class="col-12 input-border-card py-2 px-3 form-control" placeholder="Subject/Module title" rows="4"></textarea></div>
+                    <h4 class="modal-title">Add Subject</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>The content of your modal.</p>
+                </div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
             </div>
         </div>
