@@ -40,10 +40,6 @@ hr {
   margin: 10px 0 20px;
 }
 
-#navcol-1 {
-  display: hidden;
-}
-
 @media (max-width: 768px) {
   #navcol-1 {
     display: none;

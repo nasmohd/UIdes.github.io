@@ -44,3 +44,7 @@ function op(){
 //     textarea_txt.style.display = "none";
 // }
 
+function nav_trigger(){
+    var get_body = document.getElementsByTagName('body');
+    console.log(get_body);
+}

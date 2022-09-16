@@ -88,9 +88,10 @@
 
 /* 577 to 768 */
 
-@media (max-width: 768px) {
-  #navcol-1 {
-    display: none;
+@media (min-width: 768px) {
+  body {
+    display: none !important;
+    background-color: red;
   }
 }
 
@@ -99,9 +100,6 @@
     display: none !important;
     background-color: red;
   }
-}
-
-#navcol-1 {
 }
 
 #quote_txt tbody tr td a {
