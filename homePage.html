@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>ProjectPHP</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
@@ -43,7 +45,7 @@
                     <h6 class="text-muted card-subtitle mb-2">Total cards:</h6>
                     <p class="card-text" id="quote_txt">“By failing to prepare, you are preparing to fail.”&nbsp;<span id="quote_src" class="font-weight-bold align-content-end text-danger">- Benjamin Franklin</span><br></p>
                     <div class="card-footer">
-                        <h6>Add/Delete Card</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject">Add</a><a class="btn-sm btn-danger ml-2" href="#">Delete</a></div>
+                        <h6>Add/Delete Card</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject"><i class="fa fa-plus"></i></a><a class="btn-sm btn-danger ml-2" href="#" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></a></div>
                 </div>
             </div>
         </div>
@@ -55,9 +57,10 @@
                             <th style="width:5%">Edit</th>
                             <th style="width:10%">SN</th>
                             <th style="width:30%">Subject</th>
-                            <th style="width:20%">Number of Cards</th>
-                            <th style="width:20%">Progress (Success)</th>
-                            <th style="width:25%">Action</th>
+                            <th style="width:15%">Cards Total</th>
+                            <th style="width:10%">Correct</th>
+                            <th style="width:10%">Incorrect</th>
+                            <th style="width:20%">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -67,7 +70,8 @@
                             <td><a href="cards.html">Digital Image Processing<br></a></td>
                             <td>13</td>
                             <td>40%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                            <td>40%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
@@ -75,7 +79,8 @@
                             <td><a href="#">Computer Game Design<br></a></td>
                             <td>10</td>
                             <td>30%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                            <td>30%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
@@ -83,7 +88,8 @@
                             <td><a href="#">Artificial Intelligence and Machine Learning<br></a></td>
                             <td>5</td>
                             <td>25%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                            <td>25%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
@@ -91,7 +97,8 @@
                             <td><a href="#">Network Management and Administration<br></a></td>
                             <td>8</td>
                             <td>50%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                            <td>50%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
@@ -99,7 +106,8 @@
                             <td><a href="cards.html">Mobile Application Development<br></a></td>
                             <td>4</td>
                             <td>75%</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
+                            <td>75%</td>
+                            <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -173,6 +181,18 @@
                     <h4 class="modal-title">Add Subject/Module</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body"><textarea class="col-12 input-border-card py-2 px-3 form-control" placeholder="Subject/Module title" rows="4"></textarea></div>
                 <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="delete_card">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Delete Cards</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <p>Are you sure you want to Delete?</p>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary mr-auto btn-sm" type="button" data-dismiss="modal">Close</button><button class="btn btn-danger btn-sm" type="button">Wrong</button><button class="btn btn-success btn-sm" type="button">Correct</button></div>
             </div>
         </div>
     </div>

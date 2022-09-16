@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>ProjectPHP</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
@@ -43,71 +45,73 @@
                     <h6 class="text-muted card-subtitle mb-2">Total cards:</h6>
                     <p class="card-text" id="quote_txt">“By failing to prepare, you are preparing to fail.”&nbsp;<span id="quote_src" class="font-weight-bold align-content-end text-danger">- Benjamin Franklin</span><br></p>
                     <div class="card-footer">
-                        <h6>Add/Delete Cards</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject">Add</a><a class="btn-sm btn-danger ml-2" href="#">Delete</a>
-                        <div class="mt-3"><button class="btn btn-info btn-sm col-lg-10 col-md-2 col-6 col-sm-3" type="button" data-toggle="modal" data-target="#modal_quiz">Start Quiz</button></div>
-                    </div>
+                        <h6>Add/Delete Cards</h6><a class="text-white btn-sm btn-primary" href="#" data-toggle="modal" data-target="#add_subject"><i class="fa fa-plus"></i></a><a class="btn-sm btn-danger ml-2" href="#" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></a>
+                        <div
+                            class="mt-3"><button class="btn btn-info btn-sm col-lg-10 col-md-2 col-6 col-sm-3" type="button" data-toggle="modal" data-target="#modal_quiz" onclick="hide_answer()">Start Quiz</button></div>
                 </div>
             </div>
-            <div class="mt-3">
-                <div class="border-warning shadow-lg pb-2"><canvas data-bs-chart="{&quot;type&quot;:&quot;pie&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Correct&quot;,&quot;Wrong&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:[&quot;#28a745&quot;,&quot;rgb(220,53,69)&quot;],&quot;borderColor&quot;:[&quot;#677073&quot;,&quot;#677073&quot;],&quot;data&quot;:[&quot;30&quot;,&quot;70&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;left&quot;,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;top&quot;,&quot;text&quot;:&quot;Progress&quot;,&quot;fontSize&quot;:&quot;19&quot;}}}"></canvas></div>
-            </div>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-9 my-sm-3 my-2">
-            <div class="my-2 row mx-auto"><button class="btn btn-primary btn-sm ml-auto export_btn" type="button">Export CSV</button><button class="btn btn-success btn-sm ml-2 export_btn" type="button">Export PDF</button><input type="search" class="form-control col-lg-4 col-md-5 col-12 table_search"
-                    placeholder="Search">
+        <div class="mt-3">
+            <div class="border-warning shadow-lg pb-2"><canvas data-bs-chart="{&quot;type&quot;:&quot;pie&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Correct&quot;,&quot;Wrong&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;Revenue&quot;,&quot;backgroundColor&quot;:[&quot;#28a745&quot;,&quot;rgb(220,53,69)&quot;],&quot;borderColor&quot;:[&quot;#677073&quot;,&quot;#677073&quot;],&quot;data&quot;:[&quot;30&quot;,&quot;70&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;left&quot;,&quot;reverse&quot;:false},&quot;title&quot;:{&quot;display&quot;:true,&quot;position&quot;:&quot;top&quot;,&quot;text&quot;:&quot;Progress&quot;,&quot;fontSize&quot;:&quot;19&quot;}}}"></canvas></div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-9 my-sm-3 my-2">
+        <div class="my-2 row mx-auto"><button class="btn btn-success btn-sm ml-auto export_btn" type="button"><i class="fas fa-file-export mr-2"></i>Export CSV</button><button class="btn btn-danger btn-sm ml-2 export_btn" type="button"><i class="far fa-file-pdf mr-2"></i>Export PDF</button>
+            <input
+                type="search" class="form-control col-lg-4 col-md-5 col-12 table_search" placeholder="Search">
                 <div></div>
-            </div>
-            <div class="table-responsive table-bordered mx-auto table-striped">
-                <table class="table" id="quote_txt">
-                    <thead>
-                        <tr>
-                            <th style="width:5%">Edit</th>
-                            <th style="width:10%">SN</th>
-                            <th style="width:30%">Question</th>
-                            <th style="width:40%">Answer</th>
-                            <th style="width:15%">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>What is Digital Image Processing?</td>
-                            <td>is the manipulation of digital images by the use of computer system</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>2</td>
-                            <td>Applications of Digital Image Processing<br></td>
-                            <td>MSTR = Machine/Robot vision, Medical field, Sharpening image,&nbsp; Transmission and encoding, Remote sensing</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>3</td>
-                            <td>What is an image?</td>
-                            <td>is nothing more than a two-dimensional signal</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>4</td>
-                            <td>Types of Images<br></td>
-                            <td>Analog image Processing and Digital image Processing</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>5</td>
-                            <td>Characteristics of D.I.P</td>
-                            <td>BECAS = Better exp, Enhancement, Clear image, Application, Software</td>
-                            <td><button class="btn btn-info btn-sm btn_txt" type="button">Edit</button><button class="btn btn-danger btn-sm btn_txt" type="button">Delete</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
+        <div class="table-responsive table-bordered mx-auto table-striped">
+            <table class="table" id="quote_txt">
+                <thead>
+                    <tr>
+                        <th style="width:5%">Pick</th>
+                        <th style="width:10%">SN</th>
+                        <th style="width:35%">Question</th>
+                        <th style="width:40%">Answer</th>
+                        <th style="width:10%">Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>1</td>
+                        <td>What is Digital Image Processing?</td>
+                        <td>is the manipulation of digital images by the use of computer system</td>
+                        <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button" data-toggle="modal" data-target="#delete_card"><i class="icon ion-android-delete"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>2</td>
+                        <td>Applications of Digital Image Processing<br></td>
+                        <td>MSTR = Machine/Robot vision, Medical field, Sharpening image,&nbsp; Transmission and encoding, Remote sensing</td>
+                        <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>3</td>
+                        <td>What is an image?</td>
+                        <td>is nothing more than a two-dimensional signal</td>
+                        <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button"><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>4</td>
+                        <td>Types of Images<br></td>
+                        <td>Analog image Processing and Digital image Processing</td>
+                        <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button"><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>5</td>
+                        <td>Characteristics of D.I.P</td>
+                        <td>BECAS = Better exp, Enhancement, Clear image, Application, Software</td>
+                        <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button"><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     </div>
     <div class="footer-dark">
         <footer>
@@ -175,7 +179,7 @@
                 <div class="modal-header">
                     <h4 class="modal-title">Add Card</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body"><textarea class="col-12 input-border-card py-2 px-3 form-control" placeholder="Question" rows="4"></textarea><textarea class="col-12 input-border-card py-2 px-3 mt-3 form-control" placeholder="Answer" rows="4"></textarea></div>
-                <div class="modal-footer"><button class="btn btn-dark mr-auto btn-sm" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary btn-sm" type="button">Add Card</button></div>
+                <div class="modal-footer"><button class="btn btn-dark mr-auto btn-sm" type="button" data-dismiss="modal">Close</button><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-plus mr-2"></i>Add Card</button></div>
             </div>
         </div>
     </div>
@@ -184,22 +188,26 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">QUIZ</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
-                <div class="modal-body"><textarea class="col-12 input-border-card py-2 px-3 form-control" placeholder="Question" rows="4" disabled=""></textarea><textarea class="col-12 input-border-card py-2 px-3 mt-3 form-control" placeholder="Answer" rows="4" disabled=""></textarea>
-                    <div
-                        class="mt-4">
+                <div class="modal-body"><textarea class="col-12 input-border-card py-2 px-3 form-control text-center" placeholder="Question" rows="4" disabled=""></textarea><a class="mt-2" href="#" style="font-size: 12px;" onclick="op()">View Answer</a>
+                    <div class="input-container"><textarea id="id_password3" class="col-12 input-border-card py-2 px-3 form-control mt-4 text-center" placeholder="Answer" rows="4" type="password" style="display:none;" readonly=""></textarea></div>
+                    <div class="mt-4">
                         <hr>
                         <h6>Stats</h6>
+                        <ul class="stats_txt">
+                            <li><i class="fa fa-check mr-1" style="color: white; background-color: #00cc66; padding:5px; border-radius: 30px;"></i>Correct</li>
+                            <li class="mt-2"><i class="fa fa-times mr-1" style="color: white; background-color: #ff1a1a; padding:5px 7px 5px 7px; border-radius: 30px;"></i>Incorrect</li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="modal-footer"><button class="btn btn-secondary mr-auto btn-sm" type="button" data-dismiss="modal">Close</button><button class="btn btn-danger btn-sm" type="button">Wrong</button><button class="btn btn-success btn-sm" type="button">Correct</button></div>
             </div>
-            <div class="modal-footer"><button class="btn btn-secondary mr-auto btn-sm" type="button" data-dismiss="modal">Close</button><button class="btn btn-danger btn-sm" type="button">Wrong</button><button class="btn btn-success btn-sm" type="button">Correct</button></div>
         </div>
     </div>
-    </div>
-    <div class="modal fade" role="dialog" tabindex="-1" id="modal_quiz-1">
+    <div class="modal fade" role="dialog" tabindex="-1" id="delete_card">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Delete Subject</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                    <h4 class="modal-title">Delete Cards</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
                 <div class="modal-body">
                     <p>Are you sure you want to Delete?</p>
                 </div>

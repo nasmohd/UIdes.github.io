@@ -122,3 +122,14 @@ hr {
   background-color: white;
 }
 
+.stats_txt {
+  font-size: 13px;
+  list-style: none;
+  display: inline;
+  height: 10px;
+}
+
+.stats_txt li {
+  margin-top: -22px;
+}
+
