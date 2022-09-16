@@ -133,3 +133,8 @@ hr {
   margin-top: -22px;
 }
 
+#navcol-2 {
+  height: 100vh;
+  z-index: 10;
+}
+
