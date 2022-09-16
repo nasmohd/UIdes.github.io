@@ -40,6 +40,10 @@ hr {
   margin: 10px 0 20px;
 }
 
+#navcol-1 {
+  display: hidden;
+}
+
 @media (max-width: 768px) {
   #navcol-1 {
     display: none;
@@ -67,7 +71,7 @@ hr {
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link active {
-  border-bottom: 1px solid #FFF;
+  /*border-bottom: 1px solid #FFF;*/
   padding-bottom: 3px;
 }
 
@@ -131,6 +135,16 @@ hr {
 
 #navcol-2 {
   height: 100vh;
-  z-index: 10;
+  /*z-index: 10;*/
+}
+
+#nav_items {
+  display: table-cell;
+  width: 100vw;
+  height: inherit;
+  padding: 0px;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: left;
 }
 

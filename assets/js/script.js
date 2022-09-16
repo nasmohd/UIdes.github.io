@@ -45,6 +45,10 @@ function op(){
 // }
 
 function nav_trigger(){
-    var get_body = document.getElementsByTagName('body');
-    console.log(get_body);
+    // var bodyTag = document.getElementById ('bodyID');
+    // alert('Hello');
+    // bodyTag.style.backgroundColor = 'red';
+    // alert (bodyTag);
+    
+    document.body.style.overflow = 'hidden';
 }
