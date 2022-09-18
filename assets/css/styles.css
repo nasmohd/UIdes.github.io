@@ -152,3 +152,7 @@ hr {
   display: flex;
 }
 
+.modal_top_margin {
+  top: 20%;
+}
+
