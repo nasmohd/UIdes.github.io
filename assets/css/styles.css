@@ -148,3 +148,7 @@ hr {
   justify-content: left;
 }
 
+.input-container {
+  display: flex;
+}
+
