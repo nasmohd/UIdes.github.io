@@ -56,13 +56,13 @@
         </div>
     </div>
     <div class="col-sm-12 col-md-12 col-lg-9 my-sm-3 my-2">
-        <div class="my-2 row mx-auto"><button class="btn btn-success btn-sm ml-auto export_btn" type="button"><i class="fas fa-file-export mr-2"></i>Export CSV</button><button class="btn btn-danger btn-sm ml-2 export_btn" type="button"><i class="far fa-file-pdf mr-2"></i>Export PDF</button>
+        <div class="my-2 row mx-auto"><button class="btn btn-success btn-sm ml-auto export_btn" type="button" onclick="tableToCSV()"><i class="fas fa-file-export mr-2"></i>Export CSV</button><button class="btn btn-danger btn-sm ml-2 export_btn" type="button" onclick="createPDF()"><i class="far fa-file-pdf mr-2"></i>Export PDF</button>
             <input
                 type="search" class="form-control col-lg-4 col-md-5 col-12 table_search" placeholder="Search">
                 <div></div>
         </div>
-        <div class="table-responsive table-bordered mx-auto table-striped">
-            <table class="table" id="quote_txt">
+        <div class="table-responsive table-bordered mx-auto table-striped" id="cards_table">
+            <table class="table" id="table_of_cards" style="font-size:13px;">
                 <thead>
                     <tr>
                         <th style="width:5%">Pick</th>
@@ -83,8 +83,8 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td>2</td>
-                        <td>Applications of Digital Image Processing<br></td>
-                        <td>MSTR = Machine/Robot vision, Medical field, Sharpening image,&nbsp; Transmission and encoding, Remote sensing</td>
+                        <td>Application of DIP</td>
+                        <td>MSTR = Machine/Robot vision, Medical field, Sharpening image, Transmission and encoding, Remote sensing</td>
                         <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button" data-toggle="modal" data-target=""><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
                     </tr>
                     <tr>
@@ -97,7 +97,7 @@
                     <tr>
                         <td><input type="checkbox"></td>
                         <td>4</td>
-                        <td>Types of Images<br></td>
+                        <td>Types of images</td>
                         <td>Analog image Processing and Digital image Processing</td>
                         <td><button class="btn btn-info btn-sm btn_txt mr-2" type="button"><i class="fa fa-edit"></i></button><button class="btn btn-danger btn-sm btn_txt" type="button"><i class="icon ion-android-delete"></i></button></td>
                     </tr>
@@ -219,6 +219,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/chart.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/csv_conversion.js"></script>
     <script src="assets/js/pdf_conversion.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
