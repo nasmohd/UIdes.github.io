@@ -13,30 +13,108 @@
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/Footer-Dark.css">
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body id="bodyID">
+    <div id="overlay"></div>
     <nav class="navbar navbar-light navbar-expand-md navigation-clean-button footer-dark text-light">
-        <div class="container"><button data-toggle="collapse" data-target="#navcol-2" class="navbar-toggler" id="nav_toggler" onclick="nav_trigger()"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">FreshMemory</a>
-            <div
-                class="collapse navbar-collapse" id="navcol-1">
-                <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="#">View Subjects</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Second Item</a></li>
+        <div class="container">
+            <div id="sidebarBtn_and_Brand"><button class="btn btn-primary text-dark bg-white ml-5 mr-2 mr-md-3 mr-lg-3 burgerSign" id="sidebar_toggle_btn" type="button"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#">FreshMemory</a></div>
+            <div class="row mr-2">
+                <div class="dropdown dropleft mt-2"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="username_loggedin" href="#" style="text-decoration: none;color: white;">Nassor M.</a>
+                    <div class="dropdown-menu text-light bg-secondary" role="menu" id="header_name_dropdown"><a class="dropdown-item" role="presentation" href="profile.html">Profile Settings</a><a class="dropdown-item" role="presentation" href="index.html">Logout</a></div>
+                </div><span class="actions ml-3 ml-lg-3"> <a class="login" href="index.html">Log In</a><a class="btn btn-light action-button" role="button" id="action-button" href="#">Sign Up</a></span></div>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="nav navbar-nav mr-auto" id="nav_items">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="homePage.html">Subjects</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="cards.html">Cards</a></li>
                 </ul>
+            </div>
         </div>
-        <div class="dropdown dropleft"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" id="username_loggedin" href="#" style="text-decoration: none;color: white;">Nassor M.</a>
-            <div class="dropdown-menu text-light bg-secondary" role="menu" id="header_name_dropdown"><a class="dropdown-item" role="presentation" href="profile.html">Profile Settings</a><a class="dropdown-item" role="presentation" href="index.html">Logout</a></div>
-        </div><span class="actions pt-1 ml-3 ml-lg-3"> <a class="login" href="index.html">Log In</a><a class="btn btn-light action-button" role="button" id="action-button" href="#">Sign Up</a></span>
-        <div class="collapse navbar-collapse" id="navcol-2">
-            <ul class="nav navbar-nav mr-auto" id="nav_items">
-                <li class="nav-item" role="presentation"><a class="nav-link active" href="homePage.html">Subjects</a></li>
-                <li class="nav-item" role="presentation"><a class="nav-link" href="cards.html">Cards</a></li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+    </nav><div class="item_side_container" id="sidebar_content">
+    
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      <span class="fs-4">Sidebar</span>
+    </a>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link active" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+          Products
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link link-dark">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+          Customers
+        </a>
+      </li>
+    </ul>
+    <hr>
+       
+</div>
+
+<script>
+    document.querySelector(".burgerSign").addEventListener("click", function(){
+     document.querySelector("body").classList.toggle("active");
+        
+    var body_overlay = document.getElementById("overlay");
+    body_overlay.style.display = 'block';
+        
+    var body_active_status = document.getElementById("bodyID");
+    var sidebar_elem = document.getElementById("sidebar_content");
+    if (body_active_status.classList.contains("active")){ //If not active
+        body_active_status.style.width = "calc(100%)";
+        // body_active_status.style.opacity = "1";
+        // console.log ('active');   
+    }
+        
+   // if (!(body_active_status.classList.contains("active"))){ //If not active
+        // body_active_status
+//         sidebar_elem.style.display = "none";
+//         sidebar_elem.style.marginLeft = "-225px";
+//         sidebar_elem.style.transition = "all 0.5s ease";
+        
+        
+//     }else{ //If active
+//         sidebar_elem.style.display = "block";
+//         sidebar_elem.style.marginLeft = "0px";
+//     }
+    })
+    
+    
+    document.querySelector("#overlay").addEventListener("click", function(){
+     document.querySelector("body").classList.toggle("active");
+        
+    var body_overlay = document.getElementById("overlay");
+    body_overlay.style.display = 'none';
+    })
+    
+    
+    
+</script>
     <div class="row mx-1">
         <div class="col-sm-12 col-md-12 col-lg-3 my-3">
             <div class="card">
@@ -114,7 +192,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-dark">
+    <div class="footer-dark burgerSign">
         <footer>
             <div class="container">
                 <div class="row">
